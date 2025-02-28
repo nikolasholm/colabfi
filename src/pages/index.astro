@@ -68,8 +68,10 @@ const cases = [
     <!-- Hero Section -->
     <section class="min-h-screen flex items-center pt-8 relative">
       <div class="container relative z-10">
-        <h1 class="mb-6 text-balance">
-         We build cool shit with the coolest people. </h1>
+        <h1 class="mb-6 !text-balance">
+         We build cool shit with the coolest people. 
+        </h1>
+
         <p class="mb-10 max-w-3xl">
           Helsinki based venture studio. We're a experienced team of senior product designers and developers working alongside founders and entrepreneurs (in residence) to validate and develop new platforms and startups. 
           </p>
@@ -107,14 +109,16 @@ const cases = [
     </section>
 
     <!-- Cases Section -->
-    <section id="portfolio" class="py-20">
-      <div class="container">
+    <section id="portfolio" class="py-20 relative z-10">
+      <div class="container "> 
+        <div class="max-w-7xl">
         <h2>Currently working on</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           {cases.map(caseItem => (
             <Case {...caseItem} />
           ))}
         </div>
+      </div>
       </div>
     </section>
 
@@ -132,7 +136,7 @@ const cases = [
     <!-- Call to Action -->
     <section id="join" class="pt-20 pb-32 relative z-10">
       <div class="container">
-        <h2 class="mb-4 text-balance">
+        <h2 class="mb-4 !text-balance">
           No wo/man is an island. We connect missing talent to new ventures.
         </h2>
         <p class="text-base text-white/80 max-w-2xl mb-8">
@@ -156,7 +160,7 @@ const cases = [
             <a href="https://fineland.fi/" class="hover:text-white">AI</a>
           </div>
         </div>
-        <p class="text-sm !text-zinc-300 mt-8">© 2025 Colab Ventures Ltd. Sofiankatu 4, FI-00170 Helsinki. No cookies.</p>
+        <p class="text-xs !text-zinc-300 mt-8">© 2025 Colab Ventures Ltd. Sofiankatu 4, FI-00170 Helsinki. No cookies.</p>
       </div>
     </footer>
   </main>
