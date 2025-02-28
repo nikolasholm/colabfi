@@ -56,6 +56,7 @@ const cases = [
   image="/images/share.jpg"
 >
   <Header />
+  <NetworkModal />
 
   <div
   class="fixed inset-0 h-full w-full bg-[radial-gradient(#121314_1px,transparent_1px)] [background-size:16px_16px]"
@@ -143,12 +144,11 @@ const cases = [
           We collaborate with network of co:creators, agencies, advisors and investors. Sign up to the network to hear more about our missions.
         </p>
         <a href="javascript:void(0)" onclick="openNetworkModal()" class="btn">Join the network</a>
-        <NetworkModal />
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-20 border-t border-white/10 z-50 relative">
+    <footer class="py-20 border-t border-white/10 z-10 relative">
       <div class="container">
         <div class="flex flex-col md:flex-row justify-between items-start gap-8">
           <p class="text-sm !text-zinc-300 max-w-xl">
