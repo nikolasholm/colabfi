@@ -1,0 +1,47 @@
+<div id="networkModal" class="fixed inset-0 bg-black/60 backdrop-blur-lg hidden flex items-center justify-center z-[999]">
+  <div class="bg-black/0 p-8 rounded-lg max-w-4xl w-full mx-4 z-[999] relative">
+    <button id="closeNetworkModal" class="absolute top-0 right-0 text-gray-400 hover:text-gray-200">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <h2 class="mb-3">
+       We are searching for co:founders and co:llaborators.
+    </h2>
+    <p>  Sign up to the network to hear more about our missions.</p>
+
+
+    <form id="reforms-ac8bedbf-e81f-47d0-abaf-30b3ed7d80b1" class="mt-8">
+        <fieldset class="gap-x-3 flex"><legend class="mb-2">I am interested to join as</legend><label><input type="radio" data-id="3d915915-4633-4072-b85a-8960e0c8a137" value="Developer" required /> Developer</label> <label><input type="radio" data-id="3d915915-4633-4072-b85a-8960e0c8a137" value="Investor" required /> Investor</label> <label><input type="radio" data-id="3d915915-4633-4072-b85a-8960e0c8a137" value="Advisor" required /> Advisor</label> <label><input type="radio" data-id="3d915915-4633-4072-b85a-8960e0c8a137" value="Sales" required /> Sales</label> <label><input type="radio" data-id="3d915915-4633-4072-b85a-8960e0c8a137" value="Design" required /> Design</label> <label><input type="radio" data-id="3d915915-4633-4072-b85a-8960e0c8a137" value="Partner" required /> Partner</label> <label><input type="radio" data-id="3d915915-4633-4072-b85a-8960e0c8a137" value="Other" required /> Other</label></fieldset>
+        <input type="text" data-id="b57a9cc5-7f2d-4fc5-85e2-62de169c6c3f" data-label="Name" required placeholder="Name" class="w-full text-xl placeholder:text-zinc-400 border-b-2 mb-3 py-4 text-white bg-transparent focus:outline-none" />
+        <input type="email" data-id="b5c93405-faee-4ee8-8a33-cc2c43918f1e" data-label="Email" required placeholder="Email" class="w-full text-xl placeholder:text-zinc-400 border-b-2 mb-3 py-4 text-white bg-transparent focus:outline-none" />
+        <input type="text" data-id="6f6ab42c-8f29-43f4-999c-9e33b7f3347e" data-label="Message" placeholder="Message" class="w-full text-xl placeholder:text-zinc-400 border-b-2 mb-3 py-4 text-white bg-transparent focus:outline-none" />
+        <button type="submit" class="w-full bg-white hover:bg-zinc-200 text-black font-medium py-4 rounded mt-6">Send</button></form>
+        <script src="https://reforms.dev/embed-custom.js" data-form="ac8bedbf-e81f-47d0-abaf-30b3ed7d80b1"></script>
+
+
+  </div>
+</div>
+
+<script>
+  // Make this component interactive
+  const modal = document.getElementById('networkModal');
+  const closeBtn = document.getElementById('closeNetworkModal');
+  
+  // Function to open modal
+  window.openNetworkModal = () => {
+    modal?.classList.remove('hidden');
+  };
+
+  // Close modal when clicking close button
+  closeBtn?.addEventListener('click', () => {
+    modal?.classList.add('hidden');
+  });
+
+  // Close modal when clicking outside
+  modal?.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.add('hidden');
+    }
+  });
+</script> 

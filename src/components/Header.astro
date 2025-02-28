@@ -1,0 +1,25 @@
+---
+import ConnectModal from './ConnectModal.astro';
+
+const links = [
+  { text: "Portfolio", href: "#portfolio" },
+];
+---
+
+<header class="fixed w-full top-0 z-50 bg-black/20 backdrop-blur-xl">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="/" class="text-sm xl:text-base uppercase font-medium tracking-wider">CO:LAB</a>
+    <nav class="flex gap-8 items-center">
+      {links.map(link => (
+        <a href={link.href} class="text-[.725rem] uppercase font-medium tracking-widest hover:text-neutral-200 transition-colors">
+          {link.text}
+        </a>
+      ))}
+      <a onclick="openNetworkModal()" class="text-[.725rem] cursor-pointer uppercase font-medium tracking-widest hover:text-neutral-200 transition-colors">Join the Network</a>
+      <button onclick="openConnectModal()" class="btn">Connect</button>
+      
+    </nav>
+  </div>
+</header>
+
+<ConnectModal />

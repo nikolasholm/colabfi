@@ -1,0 +1,63 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  preTitle: string;
+  url?: string;
+  type?: string;
+}
+
+const { title, description, image, preTitle, url, type } = Astro.props;
+---
+
+<div class="relative group rounded-sm">
+  <div class="case-image h-[360px] lg:h-[480px] relative">
+    <Image 
+      src={image} 
+      alt={`${title} project preview`}
+      width={800}
+      height={800}
+      quality="mid"
+      class="object-cover rounded-sm w-full h-full absolute inset-0"
+    />
+    {url && (
+      <>
+        <div 
+          id={`mask-${title.toLowerCase().replace(/\s+/g, '-')}`}
+          class="mask-image absolute inset-0 bg-black/20 opacity-0 backdrop-blur-lg transition-opacity duration-300 rounded-lg flex flex-col justify-end p-8 pointer-events-none"
+          aria-labelledby={`case-${title.toLowerCase().replace(/\s+/g, '-')}`}
+        >
+        </div>
+        <div class="badge absolute top-5 left-5 z-50 bg-white/10 text-white/60 group-hover:text-white/90 transition-colors duration-300 px-2 py-1 text-[.6rem] font-semibold uppercase tracking-widest rounded shadow-inner">{type || ''}</div>
+        <div class="image-btn absolute bottom-0 left-0 right-0 w-full flex justify-end p-6">
+          
+          <a 
+            href={url}
+            class="btn group-hover:opacity-100 opacity-0 transition-opacity duration-300"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Visit ${title} website`}
+            onmouseenter={`document.getElementById('mask-${title.toLowerCase().replace(/\s+/g, '-')}').style.opacity = '1'`}
+            onmouseleave={`document.getElementById('mask-${title.toLowerCase().replace(/\s+/g, '-')}').style.opacity = '0'`}
+          >
+            <span>Visit</span>
+          </a>
+        </div>
+      </>
+    )}
+  </div>
+
+  <div class="content mt-4">
+    <p class="text-xs text-white/60 uppercase tracking-wider" aria-label="Project status">{preTitle}</p>
+    <h3 
+      id={`case-${title.toLowerCase().replace(/\s+/g, '-')}`}
+      class="mt-2 mb-4"
+    >
+      {title}
+    </h3>
+    <p class="text-white/80 mb-8 text-sm">{description}</p>
+  </div>
+</div>

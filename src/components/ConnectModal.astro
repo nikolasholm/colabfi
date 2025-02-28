@@ -1,0 +1,64 @@
+---
+// ConnectModal.astro
+---
+<div id="connectModal" class="fixed inset-0 bg-black/60 backdrop-blur-lg hidden flex items-center justify-center z-[999]">
+  <div class="bg-black/0 p-8 rounded-lg max-w-4xl w-full mx-4 z-[9999] relative">
+    <button id="closeConnectModal" class="absolute top-0 right-0 text-gray-400 hover:text-gray-200">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <h2 class="mb-3">Contact Us</h2>
+    <p>Hey nice to hear from you. Pitch your project or just say hi.</p>
+
+    <form id="reforms-4c485846-348e-4d67-8a5e-d14fd979867e" class="mt-8">
+      <input type="text" data-id="2aeb9159-1d84-4906-b108-a96d0739ed41" data-label="Company name" placeholder="Company name" class="w-full text-xl placeholder:text-zinc-400 border-b-2 mb-3 py-4 text-white bg-transparent focus:outline-none" />
+      <input type="email" data-id="da1b0829-093c-473e-84a5-a078ca182f30" data-label="Your email" required placeholder="Your email" class="w-full text-xl placeholder:text-zinc-400 border-b-2 mb-3 py-4 text-white bg-transparent focus:outline-none" />
+      <textarea data-id="89771bad-fbee-4e2f-a065-6fdfe9260846" data-label="What are you looking to build" required placeholder="What are you looking to build" class="w-full text-xl placeholder:text-zinc-400 border-b-2 mb-3 py-4 text-white bg-transparent focus:outline-none"></textarea>
+      <button type="submit" class="w-full bg-white hover:bg-zinc-200 text-black font-medium py-4 rounded mt-6">Send</button>
+    </form>
+    <script src="https://reforms.dev/embed-custom.js" data-form="4c485846-348e-4d67-8a5e-d14fd979867e"></script>
+  </div>
+</div>
+
+<script>
+  // Create a proper module-based approach
+  const modalController = {
+    modal: document.getElementById('connectModal'),
+    closeBtn: document.getElementById('closeConnectModal'),
+
+    init() {
+      // Make the open function globally available
+      window.openConnectModal = this.open.bind(this);
+      
+      // Setup event listeners
+      this.closeBtn?.addEventListener('click', this.close.bind(this));
+      this.modal?.addEventListener('click', (e) => {
+        if (e.target === this.modal) {
+          this.close();
+        }
+      });
+
+      // Optional: Add keyboard support
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !this.modal?.classList.contains('hidden')) {
+          this.close();
+        }
+      });
+    },
+
+    open() {
+      this.modal?.classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    },
+
+    close() {
+      this.modal?.classList.add('hidden');
+      document.body.style.overflow = ''; // Restore scrolling
+    }
+  };
+
+  // Initialize the controller
+  modalController.init();
+</script> 
