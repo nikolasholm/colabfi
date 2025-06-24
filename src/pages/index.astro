@@ -13,39 +13,41 @@ import NetworkModal from '../components/NetworkModal.astro';
 const cases = [
   {
     title: "Site · Studio",
-    description: "Faster way to collaborate and build website with your team.",
-    image: "/images/case1.jpg",
-    preTitle: "PRE-SEED · OPEN FOR CO-FOUNDERS",
+    description: "Faster way to collaborate and build website with AI, React and Nextjs.",
+    image: "/images/site.jpg",
+    preTitle: "IDEA · OPEN FOR CO-FOUNDERS",
     url: "https://site.studio",
-    type: "studio"
+    type: "IDEA"
   },
   {
-    title: "reforms",
-    description: "Our forms platform for collecting contacts and feedback.",
-    image: "/images/case3.jpg",
-    preTitle: "PRE-SEED · OPEN FOR CO-FOUNDERS",
+    title: "reforms · dev",
+    description: "Our forms platform for collecting contacts and feedback programmatically.",
+    image: "/images/reforms.jpg",
+    preTitle: "IDEA · OPEN FOR CO-FOUNDERS",
     url: "https://reforms.dev",
-    type: "studio" 
+    type: "IDEA" 
   },
   {
-    title: "midroll.ai",
-    description: "Midroll is new platform for audio based advertising and AI.",
-    image: "/images/case2.jpg",
-    preTitle: "SEED",
-    url: "https://midroll.ai"
+    title: "Muoto · AI",
+    description: "A centralised methodology to manage your RAG and Vector data.",
+    image: "/images/soon.jpg",
+    preTitle: "WORK IN PROGRESS",
+    url: "",
+    type: "WIP" 
   },
   {
-    title: "Page1",
-    description: "AI driven SDR automation platform.",
-    image: "/images/p1.jpg",
-    preTitle: "SEED",
-    url: "https://page1.com"
+    title: "PROMPT · STUDIO",
+    description: "AI agent flow testing and prompt engineering platform.",
+    image: "/images/prompt.jpg",
+    preTitle: "WORK IN PROGRESS",
+    type: "WIP" 
   },
   {
-    title: "Stealth",
-    description: "A new wholesale platform, AI agents, time tracking and more. We're working on something new. Please join the network to hear more.",
+    title: "OPEN FOR NEW (AD)VENTURES",
+    description: "We have decades of experience in designing and developing consumer apps, complex AI workflows, marketplaces and multiple SaaS products and platforms. ",
     image: "/images/case4.jpg",
-    preTitle: "PRE-SEED · OPEN FOR CO-FOUNDERS"
+    preTitle: "PITCH US",
+    type: "JOIN US" 
   }
 ];
 ---
@@ -67,19 +69,21 @@ const cases = [
 
   <main>
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center pt-8 relative">
-      <div class="container relative z-10">
+    <section class="min-h-screen flex items-center pt-8 relative container-sm">
+      <div class="relative z-10">
+
+        <div class="flex flex-col gap-5">
         <h1 class="mb-6 !text-balance">
           Venture Studio for AI-Native Startups.
         </h1>
 
         <p class="mb-10 max-w-3xl">
-          We build cool shit with the coolest people. We're a Helsinki based team of senior product designers and developers working alongside founders and entrepreneurs (in residence) to validate and develop new platforms and startups. 
+Helsinki based venture studio. We're a small team of experienced designers, and developers united with founders around the world to build bold new ideas into world class platforms and startups.
          </p>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-3xl">
 
           <div>
-            <ul class="space-y-2">
+            <ul class="space-y-2 !text-neutral-400">
               <li>Brand + Design</li>
               <li>Product + Web</li>
              
@@ -88,7 +92,7 @@ const cases = [
           </div>
 
           <div>
-            <ul class="space-y-2">
+            <ul class="space-y-2 !text-neutral-400">
               <li>Discovery</li>
               <li>Validation</li>
               <li>Market entry</li>
@@ -99,7 +103,7 @@ const cases = [
           
           <div class="hidden md:block">
             
-            <ul class="space-y-2">
+            <ul class="space-y-2 !text-neutral-400">
               <li>Pitch</li>
               <li>Team</li>
               <li>Legal</li>
@@ -111,9 +115,9 @@ const cases = [
 
     <!-- Cases Section -->
     <section id="portfolio" class="py-20 relative z-10">
-      <div class="container "> 
+      <div class="container-sm "> 
         <div class="max-w-7xl">
-        <h2>Currently working on</h2>
+        <h2>Work in progress</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           {cases.map(caseItem => (
             <Case {...caseItem} />
@@ -125,7 +129,7 @@ const cases = [
 
     <!-- Logo Roll Section -->
     <section class="py-20 hidden">
-      <div class="container">
+      <div class="container-sm">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-12 items-center">
           <img src="/images/logo1.svg" alt="Partner Logo" class="h-8 opacity-60 hover:opacity-100 transition-opacity" />
           <img src="/images/logo3.jpg" alt="Partner Logo" class="h-8 opacity-60 hover:opacity-100 transition-opacity" />
@@ -136,11 +140,11 @@ const cases = [
 
     <!-- Call to Action -->
     <section id="join" class="pt-20 pb-32 relative z-10">
-      <div class="container">
+      <div class="container-sm">
         <h2 class="mb-4 !text-balance">
           No wo/man is an island. We connect missing talent to new ventures.
         </h2>
-        <p class="text-base text-white/80 max-w-2xl mb-8">
+        <p class="text-base !text-neutral-300 max-w-2xl mb-8">
           We collaborate with network of co:creators, agencies, advisors and investors. Sign up to the network to hear more about our missions.
         </p>
         <a href="javascript:void(0)" onclick="openNetworkModal()" class="btn">Join the network</a>
@@ -149,9 +153,9 @@ const cases = [
 
     <!-- Footer -->
     <footer class="py-20 border-t border-white/10 z-10 relative">
-      <div class="container">
+      <div class="container-sm">
         <div class="flex flex-col md:flex-row justify-between items-start gap-8">
-          <p class="text-sm !text-zinc-300 max-w-xl">
+          <p class="text-sm !text-zinc-400 max-w-xl">
             Co:lab is an independent Venture Studio. Our team has decades of experience in building startups and leading digital products. Great products are built with ongoing collaboration and hard work. Thus we invest our time and team all in with few promising early-stage startups and ideas. We typically join pre-seed and require 10-15% equity (sweat or hybrid, gap and 1-2y vest).
           </p>
           <div class="flex gap-8 text-sm !text-zinc-200">
@@ -160,7 +164,7 @@ const cases = [
             <a href="https://fineland.fi/" class="hover:text-white hidden">AI</a>
           </div>
         </div>
-        <p class="text-xs !text-zinc-300 mt-8">© 2025 Colab Ventures Ltd. Sofiankatu 4, FI-00170 Helsinki. No cookies.</p>
+        <p class="text-xs !text-zinc-400 mt-8">© 2025 Colab Ventures Ltd. Sofiankatu 4, FI-00170 Helsinki. No cookies.</p>
       </div>
     </footer>
   </main>
