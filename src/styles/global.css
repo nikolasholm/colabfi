@@ -31,6 +31,12 @@
   outline-offset: 2px;
 }
 
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: none;
+}
+
 /* Loading states */
 .loading {
   @apply animate-pulse bg-white/10;
@@ -64,7 +70,11 @@ p { @apply text-balance text-neutral-200 }
 
 .article h2 { @apply mb-5 }
 
-.article h3 { @apply mb-4 }
+.article h3 { @apply mb-4 mt-10 }
+
+.article h2 { @apply mt-12 }
+
+.article h4 { @apply text-base font-medium mb-3 mt-6 }
 
 .article ul { @apply mb-6 text-base }
 

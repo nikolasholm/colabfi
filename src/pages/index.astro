@@ -2,7 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Case from '../components/Case.astro';
-import NetworkModal from '../components/NetworkModal.astro';
 
 // Import your local images
 // import reformsImage from '../images/case1.jpg';
@@ -13,7 +12,7 @@ import NetworkModal from '../components/NetworkModal.astro';
 const cases = [
   {
     title: "Site · Studio",
-    description: "Faster way to collaborate and build website with AI, React and Nextjs.",
+    description: "A creative canvas for designing, collaborating on, and shipping websites with AI.",
     image: "/images/site.jpg",
     preTitle: "IDEA · OPEN FOR CO-FOUNDERS",
     url: "https://site.studio",
@@ -21,7 +20,7 @@ const cases = [
   },
   {
     title: "reforms · dev",
-    description: "Our forms platform for collecting contacts and feedback programmatically.",
+    description: "A developer-first forms platform for collecting contacts, feedback, and structured data via API.",
     image: "/images/reforms.jpg",
     preTitle: "IDEA · OPEN FOR CO-FOUNDERS",
     url: "https://reforms.dev",
@@ -29,14 +28,14 @@ const cases = [
   },
   {
     title: "Muoto · AI",
-    description: "A centralised methodology to manage your RAG and Vector data.",
+    description: "One control plane for managing RAG pipelines, embeddings, and vector data across your AI stack.",
     image: "/images/soon.jpg",
     preTitle: "WORK IN PROGRESS",
     type: "WIP" 
   },
   {
-    title: "OPEN FOR NEW (AD)VENTURES",
-    description: "We have decades of experience in designing and developing consumer apps, complex AI workflows, marketplaces and multiple SaaS products and platforms. ",
+    title: "Open for new (ad)ventures",
+    description: "Decades of experience shipping consumer apps, AI workflows, marketplaces, and SaaS platforms. Bring us your boldest idea — we'll help you build it.",
     image: "/images/case4.jpg",
     preTitle: "PITCH US",
     type: "JOIN US" 
@@ -50,7 +49,6 @@ const cases = [
   image="/images/share.jpg"
 >
   <Header />
-  <NetworkModal />
 
   <div
   class="fixed inset-0 h-full w-full bg-[radial-gradient(#121314_1px,transparent_1px)] [background-size:16px_16px]"
@@ -61,46 +59,20 @@ const cases = [
 
   <main>
     <!-- Hero Section -->
-    <section class="min-h-screen flex items-center pt-8 relative container-sm">
-      <div class="relative z-10">
+    <section class="mt-48 flex items-center pt-8 relative container-sm">
+      <div class="relative z-10 max-w-3xl">
 
-        <div class="flex flex-col gap-5">
+        <div class="flex flex-col gap-y-5">
         <h1 class="mb-6 !text-balance">
-          Venture Studio for AI-Native Startups
+          Venture Studio for AI-Native Products, Tools and Startups
         </h1>
 
-        <p class="mb-10 max-w-3xl">
-Helsinki based venture studio. We're a small team of experienced designers, and developers united with founders around the world to build bold new ideas into world class platforms and startups.
+        <p class="mb-10 text-xl leading-relaxed">
+Helsinki based venture studio. We're a small team of experienced designers, and developers united with founders around the world to build bold new ideas into new platforms and startups.
          </p>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-3xl">
-
-          <div>
-            <ul class="space-y-2 !text-neutral-400">
-              <li>Brand + Design</li>
-              <li>Product + Web</li>
-             
-              <li>Front + Backend</li>
-            </ul>
-          </div>
-
-          <div>
-            <ul class="space-y-2 !text-neutral-400">
-              <li>Discovery</li>
-              <li>Validation</li>
-              <li>Market entry</li>
-            </ul>
-          </div>
+                  
           
-          
-          
-          <div class="hidden md:block">
-            
-            <ul class="space-y-2 !text-neutral-400">
-              <li>Pitch</li>
-              <li>Team</li>
-              <li>Legal</li>
-            </ul>
-          </div>
+         
         </div>
       </div>
     </section>
@@ -138,6 +110,8 @@ Helsinki based venture studio. We're a small team of experienced designers, and 
         </h2>
         <p class="text-base !text-neutral-300 max-w-2xl mb-8">
           We collaborate with network of co:creators, agencies, advisors and investors. Sign up to the network to hear more about our missions.
+          <br/><br/>
+           hei@colab.fi 
         </p>
         <a href="javascript:void(0)" onclick="openNetworkModal()" class="btn">Join the network</a>
       </div>
@@ -148,7 +122,7 @@ Helsinki based venture studio. We're a small team of experienced designers, and 
       <div class="container-sm">
         <div class="flex flex-col md:flex-row justify-between items-start gap-8">
         
-         <p class="text-xs !text-zinc-400 mt-0">© 2025 Colab Ventures Ltd. Sofiankatu 4, FI-00170 Helsinki. No cookies.</p>
+         <p class="text-xs !text-zinc-400 mt-0">© 2025 Colab Ventures Ltd. Sofiankatu 4, FI-00170 Helsinki</p>
 
           <div class="flex gap-8 text-sm !text-zinc-200">
             <a href="/privacy" class="hover:text-white">Privacy</a>
